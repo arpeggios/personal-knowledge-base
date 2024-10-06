@@ -1,18 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Home } from "./components/Home"
+// todo:
+// style with mui
+// add mui breadcrumbs
+// add react syntax highlighter https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/ 
+
+import { BrowserRouter as Router } from "react-router-dom"
 import { Navbar } from "./components/Navbar"
-import { About } from "./components/About"
+import { Main } from "./components/Main"
+import "./App.css"
 
 export function App() {
   return (
-    <>
+    <div className="app-wrapper">
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-        </Routes>
+        <Main />
       </Router>
-    </>
+    </div>
   )
 }

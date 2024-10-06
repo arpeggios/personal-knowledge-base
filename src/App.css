@@ -1,0 +1,15 @@
+.app-wrapper {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav ul {
+  padding: 0;
+}
+
+main {
+  margin-left: 50px;
+}
