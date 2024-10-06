@@ -1,8 +1,10 @@
+import { Typography } from "@mui/material"
+
 export function UseState() {
   return (
     <>
-      <h1>useState()</h1>
-      <p>The most basic React Hook.</p>
+      <Typography variant="h1">useState()</Typography>
+      <Typography>The most basic React Hook.</Typography>
     </>
   )
 }

@@ -1,0 +1,23 @@
+import { Routes, Route } from "react-router-dom"
+import { Home } from "../pages/Home"
+import { React } from "../pages/React"
+import { UseState } from "../pages/UseState"
+import { CSS } from "../pages/CSS"
+import { JavaScript } from "../pages/JavaScript"
+import { Destructuring } from "../pages/Destructuring"
+import { Box } from "@mui/material"
+
+export function MainContent() {
+  return (
+    <Box component="main">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/css' element={<CSS />} />
+        <Route path="javascript" element={<JavaScript />} />
+        <Route path="/javascript/destructuring" element={<Destructuring />} />
+        <Route path="/react" element={<React />} />
+        <Route path="/react/useState" element={<UseState />} />
+      </Routes>
+    </Box>
+  )
+}
