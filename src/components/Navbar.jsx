@@ -12,34 +12,46 @@ export function Navbar() {
     navigate(to)
   }
 
+  const links = [
+    {
+      path: '',
+      text: 'PKB',
+      icon: 'HomeIcon',
+      iconColor: 'primary',
+
+    },
+    {
+      path: 'html',
+      text: 'HTML'
+    },
+    {
+      path: 'css',
+      text: 'CSS'
+    },
+    {
+      path: 'javascript',
+      text: 'JavaScript'
+    },
+    {
+      path: 'react',
+      text: 'React'
+    }
+  ]
+
   return (
     <Box>
       <List component={"nav"}>
-        <ListItemButton
-          selected={selected === 0}
-          onClick={() => handleClick("/", 0)}
-        >
-          <ListItemIcon><HomeIcon color="primary" /></ListItemIcon>
-          <ListItemText primary="PKB" />
-        </ListItemButton>
-        <ListItemButton
-          selected={selected === 1}
-          onClick={() => handleClick("/css", 1)}
-        >
-          <ListItemText primary="CSS" />
-        </ListItemButton>
-        <ListItemButton
-          selected={selected === 2}
-          onClick={() => handleClick("/javascript", 2)}
-        >
-          <ListItemText primary="JavaScript" />
-        </ListItemButton>
-        <ListItemButton
-          selected={selected === 3}
-          onClick={() => handleClick("/react", 3)}
-        >
-          <ListItemText primary="React" />
-        </ListItemButton>
+        {links.map((item, index) => {
+          return <ListItemButton key={Math.floor(Math.random() * 10000)}
+            selected={selected === index}
+            onClick={() => handleClick("/" + item.path, index)}
+          >
+            {item.icon === "HomeIcon" && (
+              <ListItemIcon><HomeIcon color={item.iconColor} /></ListItemIcon>
+            )}
+            <ListItemText primary={item.text} />
+          </ListItemButton>
+        })}
       </List>
     </Box>
   )
