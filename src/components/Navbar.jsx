@@ -42,7 +42,7 @@ export function Navbar() {
     <Box>
       <List component={"nav"}>
         {links.map((item, index) => {
-          return <ListItemButton key={Math.floor(Math.random() * 10000)}
+          return <ListItemButton key={item.path}
             selected={selected === index}
             onClick={() => handleClick("/" + item.path, index)}
           >
