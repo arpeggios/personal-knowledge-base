@@ -10,7 +10,7 @@ export function React() {
           <Typography variant="h2">State Management</Typography>
         </ListItem>
         <ListItem disablePadding>
-          <Link component={RouterLink} to="/react/useState">
+          <Link component={RouterLink} to="/react/useStatePage">
             <Typography>useState()</Typography>
           </Link>
         </ListItem>
